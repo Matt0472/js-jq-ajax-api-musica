@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,6 +15,16 @@
             <img src="img/logo.png" alt="logo" />
         </div>
     </header>
+    <div class="select_wrapper">
+      <label for="pet-select"><i class="fas fa-arrow-circle-down"></i> Choose a genre <i class="fas fa-arrow-circle-down"></i></label>
+      <select class="" name="Genere">
+        <option value="">--Please choose an option--</option>
+        <option value="jazz">Jazz</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+        <option value="metal">Metal</option>
+      </select>
+    </div>
 
     <div class="cds-container container">
 
@@ -25,6 +36,7 @@
           <h3>{{title}}</h3>
           <span class="author">{{author}}</span>
           <span class="year">{{year}}</span>
+          <span class="genre display_none">{{genre}}</span>
         </div>
     </script>
     <script src="js/main.js" charset="utf-8"></script>
