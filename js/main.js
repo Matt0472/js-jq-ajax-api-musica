@@ -4,8 +4,15 @@ $(document).ready(function() {
         url: 'https://flynn.boolean.careers/exercises/api/array/music',
         method: "GET",
         success: function(data, stato) {
-          console.log(data.response);
           printSingleCd(data.response);
+
+            $('.cd').each(function () {
+            var cdGenre = $(this).find('span.genre').text();
+            var option = $('option').val();
+            console.log(cdGenre);
+            console.log(option);
+          });
+
         },
         error: function(richiesta, stato, errori) {
           alert('E\' avvenuto un errore.' + errori);
