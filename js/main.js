@@ -21,13 +21,15 @@ function filterCds(elementsDom) {
   elementsDom.each(function () {
     var genre = $(this).find('.genre').text();
     var value = $('select').val();
-    if (value != 'Choose') {
+    if (value != 'All') {
       if(value == genre) {
         $(this).show();
       } else {
         $(this).hide();
       }
-    } 
+    } else {
+      $('.cd').show();
+    }
 
   });
 }
