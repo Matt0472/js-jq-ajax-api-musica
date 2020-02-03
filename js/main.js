@@ -8,7 +8,7 @@ $(document).ready(function() {
 
             $('.cd').each(function () {
             var cdGenre = $(this).find('span.genre').text();
-            var option = $('option').val();
+            var option = $('option').attr('data-album');
             console.log(cdGenre);
             console.log(option);
           });
